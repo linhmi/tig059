@@ -25,4 +25,19 @@ public class Room {
     
 }
 
-
+ public Room(String description,
+              Room north,        
+              Room east,
+              Room south,        
+              Room west,
+              List<Thing> things) {
+    if ( description == null || things == null) {
+      throw new NullPointerException("things or description can't be null.");
+    }
+    this.description=description;
+    this.north=north;
+    this.east=east;
+    this.south=south;
+    this.west=west;
+    this.things=things;
+  }
