@@ -90,9 +90,9 @@ public class Player{
     if(curRoom=null){
       throw.IllegalArgumentException(System.out.println("Bit*h u Stevie Wonder or somthin"));
     } 
-    else (Direction.currentR);
+    else (curRoom==Room getRoom(Direction direction));
   }
-  public Room getRoom(Direction direction) {
+  
 //P3.6 toString() : String
 
   /**
@@ -103,6 +103,8 @@ public class Player{
   public String toString() {
     // return a string with information about e.g.
     // the current room and the whole inventory.
+    return "You're here:" + this.currentRoom+ " and you have" + this.inventory + "in your inventory. ";
+    
   }
 
 }
