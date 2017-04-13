@@ -92,7 +92,7 @@ public class Player{
     } 
     else (Direction.currentR);
   }
-
+  public Room getRoom(Direction direction) {
 //P3.6 toString() : String
 
   /**
