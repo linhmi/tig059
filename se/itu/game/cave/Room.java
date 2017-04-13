@@ -41,3 +41,22 @@ public class Room {
     this.west=west;
     this.things=things;
   }
+
+ public void setConnectingRoom(Direction direction, Room room) {
+    switch (direction) {
+      case NORTH:
+        north = room;
+        break;
+      case EAST:
+        east = room;
+        break;
+      case SOUTH:
+        south = room;
+        break;
+      case WEST:
+        west = room;
+        break;
+      default: // This is actually a case where we can skip the default label!
+        throw new IllegalArgumentException("Direction not corect, can't happen ;)");
+    }
+  }
