@@ -31,6 +31,10 @@ public class Player{
   public void takeThing(Thing thing) {
     // Remove this things from the current room
     // Add this thing to the inventory
+    if (currentRoom.remove(thing)){
+      inventory.add(thing);
+    }
+    
   }
 
   /**
@@ -42,15 +46,21 @@ public class Player{
     // Check that we can drop this Thing, or
     //   throw a new IllegalArgumentException with messge
     // Remove this thing from the inventory
+    if (inventory.remove(thing)){
+      currentRoom.add(thing);
+    } 
+    else  (inventory.isEmpty){
+      throw.IllegalArgumentException(System.out.println("you aint got shit"));
+    }
   }
 
-  /**
+   /**
 '   * Return the player's inventory
    * @return the inventory
    */
   public List<Thing> inventory() {
     // return a reference to the player's inventory
-    
+    return inventory;  
     // (or if you are fancy, a copy of it or a
     //  view of it which cannot be modified)
     // The last thing is "extra for the ambitious"
