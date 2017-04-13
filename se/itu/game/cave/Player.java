@@ -71,6 +71,7 @@ public class Player{
    * @return the current room.
    */
   public Room currentRoom() {
+    return currentRoom;
     // return a reference to the Player's current Room
   }
 
@@ -85,9 +86,14 @@ public class Player{
     //  throw a new IllegalArgumentException with a message
     // If it wasn't null,
     //  change the Player's current Room to the Room above
+    Room curRoom =Direction.currentRoom;
+    if(curRoom=null){
+      throw.IllegalArgumentException(System.out.println("Bit*h u Stevie Wonder or somthin"));
+    } 
+    else (Direction.currentR);
   }
 
-P3.6 toString() : String
+//P3.6 toString() : String
 
   /**
    * Returns a String representation of the player<br>
