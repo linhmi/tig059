@@ -35,7 +35,7 @@ public class Room {
           player.go(0);
       */
     
-}
+
 /*Hint: Collections has a utility method for making an unmodifiable
 view of some list object. If we have a reference to e.g. a list,
 we can do:
@@ -46,7 +46,8 @@ The call on the second line creates an unmodifiableList from
 the variable list.
 */
  public List<Thing> things() {
-      return List<Thing>;
+      return things;
+ }
     // Return an unmodifialble view of the things list
 /*removeThing(thing : Thing) : Thing
 Comment:
@@ -73,8 +74,8 @@ permit it.
    * @throws NullPointerException - if thing is null.
    */
   public Thing removeThing(Thing thing) {
-    List<object>objs; Thing (object) 
-    if (List<Thing> == null) {
+ /**   List<object>objs; Thing (object) 
+    if (List<thing> == null) {
      Thing.NullPointerException("whoot");
     }
     if else { 
@@ -84,12 +85,27 @@ permit it.
     else {
       Thing.IllegalArgumentException("hello");
     }
+  */
+    try {
+    	
+    	if(things.contains(thing))
+    		things.remove(thing);
+    		return thing;}
+    			
+    catch (IllegalArgumentException e){
+    	System.out.println("IllegalArgumentException caught");
+    }	
+    
+    catch (NullPointerException e){
+    	System.out.println("NullPointerException caught");
+    }
     // Check if thing is null, and if so,
     //   throw a new NullPointerException with a message
     // If we can remove the thing from our things-list,
     //   remove it and return the thing.
     // Otherwise (we couldn't remove it), throw
     // a new IllegalArgumentException with a message.
+	return thing; //??
   }
 
 /*putThing(thing : Thing) : void
@@ -190,3 +206,4 @@ learn to do the right thing ;-)
         throw new IllegalArgumentException("Direction not corect, can't happen ;)");
     }
   }
+}
