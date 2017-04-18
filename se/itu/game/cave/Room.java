@@ -46,8 +46,8 @@ The call on the second line creates an unmodifiableList from
 the variable list.
 */
  public List<Thing> things() {
+      return List<Thing>;
     // Return an unmodifialble view of the things list
-  }
 /*removeThing(thing : Thing) : Thing
 Comment:
 There are some checks to do here and some exceptions
@@ -73,6 +73,17 @@ permit it.
    * @throws NullPointerException - if thing is null.
    */
   public Thing removeThing(Thing thing) {
+    List<object>objs; Thing (object) 
+    if (List<Thing> == null) {
+     Thing.NullPointerException("whoot");
+    }
+    if else { 
+      Thing.remove();
+      return thing;
+    }
+    else {
+      Thing.IllegalArgumentException("hello");
+    }
     // Check if thing is null, and if so,
     //   throw a new NullPointerException with a message
     // If we can remove the thing from our things-list,
