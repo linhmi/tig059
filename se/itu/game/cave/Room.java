@@ -134,6 +134,7 @@ learn to do the right thing ;-)
    * @return a String representatio of the Room
    */
   public String toString() {
+       return this.description + "you have " + this.things + "in your bag";
     // Return a String describing this room.
     // Perhaps, the description and the list of things?
   }
