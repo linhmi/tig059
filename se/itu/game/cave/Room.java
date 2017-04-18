@@ -124,6 +124,7 @@ learn to do the right thing ;-)
    * @return the Room's description
    */
   public String description() {
+      return description;
     // Return a String with the description for this Room
     // e.g. the instance variable holding this information.
   }    
